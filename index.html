@@ -11,8 +11,14 @@
 
 <script>
 function init(){
+	
+	document.writeln("userAgent:");
+	document.writeln("<br>"+navigator.userAgent);
+
+	document.writeln("<br><br>");
+	document.writeln("<br>分辨率相关:");
 	var s = "";
-	s += " \n网页可见区域宽："+ document.body.clientWidth;
+	s += "网页可见区域宽："+ document.body.clientWidth;
 	s += " \n网页可见区域高："+ document.body.clientHeight;
 	s += " \n网页可见区域宽："+ document.body.offsetWidth + " (包括边线和滚动条的宽)";
 	s += " \n网页可见区域高："+ document.body.offsetHeight + " (包括边线的宽)";
@@ -44,7 +50,7 @@ function init(){
 	s += " \n文档可见区域高度 "+ document.documentElement.clientHeight;
 
 	console.log(s);
-	document.write("<pre>"+s+"</pre>");
+	document.writeln("<pre>"+s+"</pre>");
 }
 
 init();
